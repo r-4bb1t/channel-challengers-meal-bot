@@ -25,5 +25,8 @@ CHANNEL_ACCESS_SECRET="your_access_secret"
 5. `packages/webhook` 폴더에서 `yarn run compile`후 `yarn run start`를 실행합니다.
 6. Webhook을 받기 위해서는 로컬 서버로 사용할 수 없으므로, `ngrok`이나 `heroku` 등을 사용해서 로컬 서버를 인터넷으로 서빙해주세요. 그 후 해당 url을 Channel의 Webhook에 등록합니다
 7. 서버가 올바르게 떴다면, 팀챗의 공개 그룹에 /밥약 이라고 보내보세요! 랜덤 운영진이 나타나서 밥을 사줄 것입니다.
+
+
+
 ![image](https://user-images.githubusercontent.com/52532871/171597120-0ec16d0c-e7bb-44d1-8262-6e9fae661bfd.png)
 
