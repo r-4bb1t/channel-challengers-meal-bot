@@ -22,6 +22,19 @@ const summonTargetManagerInfo = [
   { id: "179243", username: "김채린" },
 ];
 
+const meals = [
+  "등촌칼국수🍜",
+  "백소정🥘",
+  "사랑마라탕🍲",
+  "정상파스타🍝",
+  "매스플레이트🍜",
+  "야마토텐동🍤",
+  "치킨🍗",
+  "피자🍕",
+  "햄버거🍔",
+  "샌드위치🥙",
+];
+
 const app = express();
 
 app.use(express.json());
@@ -70,7 +83,9 @@ app.post("/", async (res: WebhookResponse) => {
         blocks: [
           {
             type: "text",
-            value: `<link type="manager" value="${id}">@${username}</link>님!! <link type="manager" value="${personId}">@${name}</link>님한테 밥 사주세용`,
+            value: `<link type="manager" value="${id}">@${username}</link>님!! <link type="manager" value="${personId}">@${name}</link>님한테 밥 사주세요! 메뉴는 ${
+              meals[Math.floor(Math.random() * meals.length)]
+            } 어떠세요?`,
           },
         ],
       });
